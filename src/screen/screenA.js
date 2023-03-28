@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ScreenA({navigation}) {
   const onPress = () => {
-    navigation.navigate('signUp');
+    navigation.goBack();
   };
   return (
     <View style={{backgroundColor: 'red'}}>

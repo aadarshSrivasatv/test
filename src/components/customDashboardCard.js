@@ -11,11 +11,11 @@ export default function CustomDashboardCard({heading, amount}) {
 }
 const styles = StyleSheet.create({
   cardBody: {
-    width: '50%',
-    height: 100,
+    width: '45%',
+    minHeight: 100,
     backgroundColor: 'white',
     borderRadius: 30,
-    marginTop: 30,
+    margin: 10,
     alignItems: 'center',
     padding: 12,
   },
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     shadowColor: '#171717',
     shadowOpacity: 0.2,
     shadowRadius: 3,
-    elevation: 40,
+    elevation: 15,
   },
   textStyle: {
     fontSize: 20,

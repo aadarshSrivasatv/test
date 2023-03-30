@@ -2,25 +2,39 @@ import {View, Text, StyleSheet, FlatList} from 'react-native';
 import React from 'react';
 import CustomDashboardCard from '../components/customDashboardCard';
 import {dashBoardData} from './data';
+import Graph from '../components/graph';
+import BChart from '../components/barChart';
+import {ScrollView} from 'react-native-gesture-handler';
 export default function DashBoard() {
   const renderItem = ({item}) => {
     return <CustomDashboardCard heading={item.heading} amount={item.amount} />;
   };
   return (
     <View style={styles.body}>
-      <FlatList
+      <View
         style={{
-          height: '100%', //without hight width flat is not working?. doubt
-          width: '100%',
-          // flex:1,
-          borderWidth: 2,
-        }}
-        // numColumns={2}
-        data={dashBoardData}
-        horizontal={true}
-        renderItem={renderItem}
-        keyExtractor={item => item.id}
-      />
+          height: 280,
+          marginTop: 20,
+        }}>
+        <FlatList
+          numColumns={2}
+          data={dashBoardData}
+          // horizontal={true}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
+      </View>
+      <ScrollView>
+        <View
+          style={{
+            alignItems: 'center',
+            // borderWidth: 2,
+            // alignContent: 'center',
+          }}>
+          <Graph />
+          <BChart />
+        </View>
+      </ScrollView>
     </View>
   );
 }

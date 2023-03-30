@@ -40,7 +40,8 @@ export default function SignUp({navigation}) {
   };
   const validatePassword = (password, confirmPassword) => {
     let check = password.match(confirmPassword);
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+=[{\]};:<>|./?,-])(?=.*[^\da-zA-Z]).{8,}$/;
 
     if (check != null) {
       if (passwordRegex.test(password)) {

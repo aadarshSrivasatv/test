@@ -15,14 +15,17 @@ export default function ResetPassword({navigation}) {
   }
 
   const validatePassword = resetPassword => {
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+=[{\]};:<>|./?,-])(?=.*[^\da-zA-Z]).{8,}$/;
+    console.log(resetPassword);
     if (passwordRegex.test(resetPassword)) {
-      setPasswordValidation(true);
+      // setPasswordValidation(true);
       navigation.navigate('home');
       return;
     } else {
-      setPasswordValidation(false);
+      // setPasswordValidation(false);
+      console.log('not');
       setPasswordValidation('');
       setErrorMsg('weak password');
       return;

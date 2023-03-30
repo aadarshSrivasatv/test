@@ -6,19 +6,23 @@ export default function CustomInput({
   placeholder,
   value,
   setValue,
-  secure,
-  type,
+  secure = false,
+  type = 'default',
   length,
+  customStyle,
 }) {
   return (
     <TextInput
-      style={styles.input}
+      style={[styles.input, customStyle]}
       placeholder={placeholder}
       value={value}
       onChangeText={setValue}
       secureTextEntry={secure}
       keyboardType={type}
       maxLength={length}
+      placeholderTextColor="black"
+      // onFocus={()=>{console.log("hi")}}
+      // inlineImageLeft="../asset/logo-red.png"
     />
   );
 }
@@ -27,11 +31,12 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     margin: 12,
-    borderWidth: 1,
+    borderWidth: 3,
     padding: 10,
     borderColor: '#FFB100',
     width: '90%',
     textAlign: 'center',
     borderRadius: 12,
+    color: 'black',
   },
 });

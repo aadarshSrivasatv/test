@@ -22,7 +22,7 @@ export default function CustomInput({
       maxLength={length}
       placeholderTextColor="black"
       // onFocus={()=>{console.log("hi")}}
-      // inlineImageLeft="../asset/logo-red.png"
+      inlineImageLeft="logo-red"
     />
   );
 }
@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
     height: 40,
     margin: 12,
     borderWidth: 3,
-    padding: 10,
+    paddingLeft: 30,
     borderColor: '#FFB100',
     width: '90%',
-    textAlign: 'center',
+    // textAlign: 'center',
     borderRadius: 12,
     color: 'black',
   },

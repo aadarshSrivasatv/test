@@ -18,14 +18,14 @@ const App = () => {
   console.log(Email);
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="signUp" component={SignUp} />
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {/* <Stack.Screen name="signUp" component={SignUp} />
         <Stack.Screen name="signIn" component={SignIn} />
         <Stack.Screen name="forgetPassword" component={ForgetPassword} />
-        <Stack.Screen name="resetPassword" component={ResetPassword} />
-        <Stack.Screen name="home" component={AddItem} />
-      </Stack.Navigator> */}
-      <BottomTab />
+        <Stack.Screen name="resetPassword" component={ResetPassword} /> */}
+        <Stack.Screen name="home" component={BottomTab} />
+      </Stack.Navigator>
+      {/* <BottomTab /> */}
       {/* <AddItem />  */}
     </NavigationContainer>
     /* <ScreenA /> */

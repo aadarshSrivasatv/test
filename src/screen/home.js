@@ -1,12 +1,24 @@
-import {View, Text, FlatList, StyleSheet, Image} from 'react-native';
-import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  Image,
+  Platform,
+  KeyboardAvoidingView,
+  Keyboard,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Data from './data';
 import CustomCard from '../components/customCard';
 import CustomInput from '../components/customInput';
 export default function Home() {
   const [searchData, setSearchData] = useState('');
+
   const result = Data.find(item => item.name === searchData);
+  result ? Keyboard.dismiss() : null;
+
   const renderItem = ({item}) => {
     return (
       <CustomCard
@@ -19,12 +31,12 @@ export default function Home() {
   };
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <View
+      <KeyboardAvoidingView
         style={{
           flex: result ? 0.6 : 0.1,
           backgroundColor: 'white',
         }}>
-        <View style={{marginLeft:12,marginTop:4}}>
+        <View style={{marginLeft: 12, marginTop: 4}}>
           <CustomInput
             placeholder="search item"
             value={searchData}
@@ -40,7 +52,7 @@ export default function Home() {
             image={result.image}
           />
         ) : null}
-      </View>
+      </KeyboardAvoidingView>
       <View
         style={{
           flex: 0.9,

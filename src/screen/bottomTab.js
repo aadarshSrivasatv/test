@@ -14,7 +14,10 @@ const Tab = createBottomTabNavigator();
 export default function BottomTab() {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Dash Board"
+      tabBarOptions={{
+        keyboardHidesTabBar: true,
+      }}
       screenOptions={{
         headerShown: false,
         tabBarLabelStyle: {color: 'black', fontSize: 15},
@@ -45,6 +48,24 @@ export default function BottomTab() {
           tabBarIcon: ({color, size}) => (
             <Icon name="reorder-four" size={size} color={color} />
           ),
+          headerShown: true,
+          headerStyle: {
+            height: 60,
+            // borderBottomLeftRadius:30,
+            borderBottomLeftRadius: 20,
+            borderBottomRightRadius: 20,
+          
+          },
+          headerTitleStyle: {
+            // alignItems: 'center',
+            color: '#FFB100',
+            textAlign: 'center',
+
+            width: 360,
+          },
+          headerBackgroundContainerStyle: {
+            backgroundColor: '#FFB100',
+          },
         }}
       />
       <Tab.Screen

@@ -35,7 +35,7 @@ export default function ForgetPassword({navigation}) {
             }}>
             Forget Password
           </Text>
-          <Text style={{fontSize: 15}}>
+          <Text style={{fontSize: 15, color: '#1A120B'}}>
             Enter the email address associated with your account below to
             receive a password reset code.
           </Text>

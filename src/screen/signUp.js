@@ -80,7 +80,7 @@ export default function SignUp({navigation}) {
               }}>
               Sign Up!
             </Text>
-            <Text style={{fontSize: 15}}>
+            <Text style={{fontSize: 15, color: '#1A120B'}}>
               Welcome to our sign-up page! We're excited to have you join our
               community.
             </Text>

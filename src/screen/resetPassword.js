@@ -46,7 +46,7 @@ export default function ResetPassword({navigation}) {
             }}>
             Reset Password
           </Text>
-          <Text style={{fontSize: 15}}>
+          <Text style={{fontSize: 15, color: '#1A120B'}}>
             Enter confirmation code and new password for your account below.
           </Text>
         </View>

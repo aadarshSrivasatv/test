@@ -13,11 +13,13 @@ const DropdownInput = ({value, setValue}) => {
         borderColor: '#FFB100',
         borderRadius: 12,
         margin: 12,
+        justifyContent: 'center',
+        paddingLeft: 15,
       }}>
       <Picker
         selectedValue={value}
         onValueChange={setValue}
-        style={{color: 'black'}}>
+        style={{color: 'black', height: 35, width: '90%'}}>
         <Picker.Item label="Pen" value="pen" />
         <Picker.Item label="Pencil" value="pencil" />
         <Picker.Item label="Rubber" value="rubber" />

@@ -41,4 +41,14 @@ const data = [
   },
 ];
 
+export const dashBoardData = [
+  {id: '1', heading: 'Total item sold', amount: '200+'},
+  {id: '2', heading: 'Total selling price', amount: '$3000'},
+  {id: '3', heading: 'Total profit', amount: '$499'},
+  {id: '5', heading: 'profit %', amount: '30%'},
+  {id: '6', heading: 'profit %', amount: '30%'},
+  {id: '7', heading: 'profit %', amount: '30%'},
+  {id: '8', heading: 'profit %', amount: '30%'},
+];
+
 export default data;

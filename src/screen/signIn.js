@@ -35,7 +35,7 @@ export default function SignIn({navigation}) {
             }}>
             Sign In
           </Text>
-          <Text style={{fontSize: 15}}>
+          <Text style={{fontSize: 15, color: '#1A120B'}}>
             Welcome back! Please sign in to continue
           </Text>
         </View>

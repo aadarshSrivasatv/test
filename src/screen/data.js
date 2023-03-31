@@ -1,4 +1,3 @@
-
 import {
   View,
   Text,
@@ -62,13 +61,13 @@ export const dashBoardData = [
   {id: '4', heading: 'profit%', amount: 30},
 ];
 
-
+console.log('hii');
 
 export function pushData(prop) {
   // console.log(prop);
   data.push(prop);
 }
-export function popData() { 
- data.pop()
+export function popData() {
+  data.pop();
 }
 export default data;

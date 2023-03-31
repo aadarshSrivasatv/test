@@ -13,7 +13,7 @@ export default function DashBoard() {
     <View style={styles.body}>
       <View
         style={{
-          height: 280,
+          height: 250,
           marginTop: 20,
         }}>
         <FlatList
@@ -24,7 +24,7 @@ export default function DashBoard() {
           keyExtractor={item => item.id}
         />
       </View>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View
           style={{
             alignItems: 'center',

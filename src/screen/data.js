@@ -1,3 +1,17 @@
+
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  Image,
+  Platform,
+  KeyboardAvoidingView,
+  Keyboard,
+  TouchableOpacity,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
+
 const data = [
   {
     id: '1',
@@ -42,10 +56,19 @@ const data = [
 ];
 
 export const dashBoardData = [
-  {id: '1', heading: 'Item sold', amount: '200+'},
-  {id: '2', heading: 'Total Selling', amount: '$3000'},
-  {id: '3', heading: 'Total profit', amount: '$499'},
-  {id: '4', heading: 'Profit%', amount: '30%'},
+  {id: '1', heading: 'Item sold', amount: 200},
+  {id: '2', heading: 'Total Selling', amount: 3000},
+  {id: '3', heading: 'Total profit', amount: 499},
+  {id: '4', heading: 'profit%', amount: 30},
 ];
 
+
+
+export function pushData(prop) {
+  // console.log(prop);
+  data.push(prop);
+}
+export function popData() { 
+ data.pop()
+}
 export default data;

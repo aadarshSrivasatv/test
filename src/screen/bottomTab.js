@@ -1,20 +1,18 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
-// import Icon from 'react-native-vector-icons/FontAwesome';r
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Home from './home';
 import DashBoard from './dashBoard';
 import Profile from './profile';
 import AddItem from './addItem';
+import MyStack from './stack';
 
 const Tab = createBottomTabNavigator();
 
 export default function BottomTab() {
   return (
     <Tab.Navigator
-      initialRouteName="Dash Board"
+      initialRouteName="Home"
       tabBarOptions={{
         keyboardHidesTabBar: true,
       }}
@@ -25,7 +23,7 @@ export default function BottomTab() {
       }}>
       <Tab.Screen
         name="Home"
-        component={Home}
+        component={MyStack}
         options={{
           tabBarIcon: ({color, size}) => (
             <Icon name="home" size={size} color={color} />
@@ -54,16 +52,17 @@ export default function BottomTab() {
             // borderBottomLeftRadius:30,
             borderBottomLeftRadius: 20,
             borderBottomRightRadius: 20,
-          
           },
           headerTitleStyle: {
             // alignItems: 'center',
             color: '#FFB100',
             textAlign: 'center',
-
-            width: 360,
+            width: Dimensions.get('screen').width / 1.09,
+            // width: Dimensions,
+            // borderWidth: 2,
           },
           headerBackgroundContainerStyle: {
+            //  paddingRight:10,
             backgroundColor: '#FFB100',
           },
         }}

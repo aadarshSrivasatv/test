@@ -11,6 +11,8 @@ import ResetPassword from './src/screen/resetPassword';
 import Home from './src/screen/bottomTab';
 import BottomTab from './src/screen/bottomTab';
 import Graph from './src/components/graph';
+import Edit from './src/screen/edit';
+
 const App = () => {
   const [Email, setEmail] = useState('');
   console.log(Email);
@@ -24,6 +26,7 @@ const App = () => {
         <Stack.Screen name="home" component={BottomTab} />
       </Stack.Navigator>
     </NavigationContainer>
+    // <Edit/>
   );
 };
 const styles = StyleSheet.create({});

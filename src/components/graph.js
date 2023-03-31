@@ -52,7 +52,7 @@ export default function Graph() {
             stroke: 'black',
           },
         }}
-        bezier
+         bezier
         style={{
           marginVertical: 8,
           borderRadius: 16,

@@ -5,11 +5,13 @@ import CustomInput from '../components/customInput';
 import CustomButton from '../components/customButton';
 import DropdownInput from '../components/customDropList';
 import ImgButton from '../components/customImgButton';
+import { pushData } from './data';  //to be add
 export default function AddItem() {
   const [name, setName] = useState('');
   const [category, setCategory] = useState('pen');
   const [price, setPrice] = useState('');
   const [quantity, setQuantity] = useState('');
+  
   console.log(category);
   return (
     <SafeAreaView style={styles.body}>
@@ -57,7 +59,12 @@ export default function AddItem() {
           customStyle={{borderColor: '#FFB100', borderWidth: 3}}
           type="numeric"
         />
-        <CustomButton title="Add" customStyle={{width: 100}} />
+        <CustomButton title="Add" customStyle={{ width: 100 }}
+          onPress={() => {
+          pushData({ id: 6, name: name, price: price });
+          // alert("clicked");
+          }}
+        />
       </View>
     </SafeAreaView>
   );

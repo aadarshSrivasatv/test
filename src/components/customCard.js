@@ -1,7 +1,14 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 
-export default function CustomCard({ name, image, description, price }) {
+export default function CustomCard({
+  name,
+  image,
+  description,
+  price,
+  trim = false,
+}) {
+  // console.log(trim);
   function trimString(string, maxLength) {
     if (string.length > maxLength) {
       return string.slice(0, maxLength) + '...';
@@ -33,8 +40,19 @@ export default function CustomCard({ name, image, description, price }) {
           <Text> ${price}</Text>
         </Text>
       </View>
-      <View style={{ flex: 0.7, justifyContent: 'center', alignItems: 'center', flexWrap:'wrap'}}>
-        <Text style={{ fontSize: 20, color: 'black' }}>{ trimString(description,100)}</Text>
+      <View
+        style={[
+          {
+            flex: 0.7,
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+          },
+          trim && {padding: 30},
+        ]}>
+        <Text style={{fontSize: 20, color: 'black'}}>
+          {trim ? description : trimString(description, 100)}
+        </Text>
       </View>
     </View>
   );
@@ -43,7 +61,7 @@ export default function CustomCard({ name, image, description, price }) {
 const styles = StyleSheet.create({
   cardStyle: {
     width: '90%',
-    height: 150,
+    minHeight: 150,
     backgroundColor: 'white',
     borderRadius: 20,
     margin: 20,

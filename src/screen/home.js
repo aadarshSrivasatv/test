@@ -7,30 +7,38 @@ import {
   Platform,
   KeyboardAvoidingView,
   Keyboard,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Data, { pushData } from './data';
+import Data, {pushData} from './data';
 import CustomCard from '../components/customCard';
 import CustomInput from '../components/customInput';
 
-export default function Home({ navigation }) {
+export default function Home({navigation}) {
   // pushData();
   const [searchData, setSearchData] = useState('');
 
-  const result = Data.find(item => item.name === searchData);
+  const result = Data.find(
+    item => item.name === searchData.replace(/\s/g, '').toLowerCase(), //special case handled
+  );
   result ? Keyboard.dismiss() : null;
 
   const renderItem = ({item}) => {
     return (
-      <CustomCard
-        name={item.name}
-        price={item.price}
-        description={item.description}
-        image={item.image}
-        // trim={true}
-      />
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={() => {
+          navigation.navigate('Edit', item);
+        }}>
+        <CustomCard
+          name={item.name}
+          price={item.price}
+          description={item.description}
+          image={item.image}
+          // trim={true}
+        />
+      </TouchableOpacity>
     );
   };
   return (
@@ -50,11 +58,9 @@ export default function Home({ navigation }) {
 
         {result ? (
           <TouchableOpacity
-            style={{}}
             activeOpacity={0.9}
             onPress={() => {
-
-              navigation.navigate('Edit',result);
+              navigation.navigate('Edit', result);
             }}>
             <CustomCard
               name={result.name}

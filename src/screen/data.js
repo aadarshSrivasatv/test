@@ -56,12 +56,10 @@ const data = [
 
 export const dashBoardData = [
   {id: '1', heading: 'Item sold', amount: 200},
-  {id: '2', heading: 'Total Selling', amount: 3000},
-  {id: '3', heading: 'Total profit', amount: 499},
-  {id: '4', heading: 'profit%', amount: 30},
+  {id: '2', heading: 'Total Selling', amount: 3000, prefix: '\u20A8'},
+  {id: '3', heading: 'Total profit', amount: 499, prefix: '\u20A8'},
+  {id: '4', heading: 'profit%', amount: 30, suffix: '%'},
 ];
-
-console.log('hii');
 
 export function pushData(prop) {
   // console.log(prop);

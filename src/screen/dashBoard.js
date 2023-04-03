@@ -7,7 +7,7 @@ import BChart from '../components/barChart';
 import {ScrollView} from 'react-native-gesture-handler';
 export default function DashBoard() {
   const renderItem = ({item}) => {
-    return <CustomDashboardCard heading={item.heading} amount={item.amount} />;
+    return <CustomDashboardCard heading={item.heading} amount={item.amount} prefix={item.prefix} suffix={item.suffix} />;
   };
   return (
     <View style={styles.body}>

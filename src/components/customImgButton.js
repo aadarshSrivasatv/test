@@ -50,7 +50,7 @@ export default function ImgButton({navigation}) {
         ) : (
           <Image
             style={{width: 100, height: 100, margin: 15, borderRadius: 100}}
-            source={require('../asset/login.png')}
+            source={require('../asset/cart.jpg')}
           />
         )}
       </View>

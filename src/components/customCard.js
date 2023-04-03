@@ -24,6 +24,7 @@ export default function CustomCard({
           // borderWidth: 3,
           justifyContent: 'center',
           alignItems: 'center',
+          padding: 10,
         }}>
         <Image
           style={{

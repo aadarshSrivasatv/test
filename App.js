@@ -19,14 +19,13 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
-        {/* <Stack.Screen name="signUp" component={SignUp} />
+        <Stack.Screen name="signUp" component={SignUp} />
         <Stack.Screen name="signIn" component={SignIn} />
         <Stack.Screen name="forgetPassword" component={ForgetPassword} />
-        <Stack.Screen name="resetPassword" component={ResetPassword} /> */}
+        <Stack.Screen name="resetPassword" component={ResetPassword} />
         <Stack.Screen name="home" component={BottomTab} />
       </Stack.Navigator>
     </NavigationContainer>
-    // <Edit/>
   );
 };
 const styles = StyleSheet.create({});

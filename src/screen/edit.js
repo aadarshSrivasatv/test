@@ -31,7 +31,7 @@ export default function Edit({navigation,route}) {
           size={50}
           color="white"
           onPress={() => {
-            alert("edit clicked");
+            navigation.navigate("updateItem",data);
           }}
         />
       </View>

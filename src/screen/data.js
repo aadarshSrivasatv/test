@@ -18,7 +18,8 @@ const data = [
     name: 'pen',
     description:
       'A pen is a writing instrument that uses ink to make marks on paper or other surfaces. It consists of a small container or reservoir of ink, called an ink cartridge or inkwell, and a mechanism for delivering the ink to the writing surface. ',
-    price: '5',
+    price: 5,
+    quantity: 20,
   },
   {
     id: '2',
@@ -26,7 +27,8 @@ const data = [
     name: 'pencil',
     description:
       'A pencil is a writing instrument that consists of a thin cylindrical graphite core (also known as "lead") enclosed in a wooden or plastic shaft.',
-    price: '3',
+    price: 3,
+    quantity: 24,
   },
   {
     id: '3',
@@ -34,7 +36,8 @@ const data = [
     name: 'scale',
     description:
       'A scale typically consists of a straight edge with evenly spaced markings, usually in millimeters or inches, that are used to measure distances and create accurate drawings.',
-    price: '10',
+    price: 10,
+    quantity:69,
   },
   {
     id: '4',
@@ -42,7 +45,8 @@ const data = [
     name: 'map',
     description:
       'a map usually refers to a printed or drawn representation of a geographic area, such as a city, state, or country. Maps can be used for a variety of purposes, including navigation, planning, and referenc',
-    price: '2',
+    price: 2,
+    quantity:40,
   },
   {
     id: '5',
@@ -50,7 +54,8 @@ const data = [
     name: 'eraser',
     description:
       'An eraser is a tool used for removing marks or writings from a surface, usually on paper or a chalkboard. It is typically made of a soft rubber material that is able to easily lift or rub off pencil marks or other markings without damaging the surface.',
-    price: '5',
+    price: 5,
+    quantity: 30,
   },
 ];
 

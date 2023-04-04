@@ -14,6 +14,7 @@ import React, {useState, useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from './home';
 import Edit from './edit';
+import AddItem from './addItem';
 const Stack = createStackNavigator();
 
 export default function MyStack() {
@@ -49,7 +50,7 @@ export default function MyStack() {
           },
         }}
       />
-      
+      <Stack.Screen name="updateItem" component={AddItem} />
     </Stack.Navigator>
   );
 }

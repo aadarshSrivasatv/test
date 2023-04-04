@@ -22,7 +22,7 @@ export default function CustomInput({
       maxLength={length}
       placeholderTextColor="black"
       // onFocus={()=>{console.log("hi")}}
-      inlineImageLeft="logo-red"
+      // inlineImageLeft="logo-red"
     />
   );
 }

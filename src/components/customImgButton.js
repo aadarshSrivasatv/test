@@ -2,13 +2,9 @@ import {View, Text, Button, Image, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {launchImageLibrary} from 'react-native-image-picker';
 import CustomButton from '../components/customButton';
-
-export default function ImgButton({navigation}) {
+export default function ImgButton({navigation, value}) {
   // const i = '../asset/logo-red.png';
   const [img, setimg] = useState(null);
-  // console.log(img);
-
-  // console.log(i);
 
   const handleChoosePhoto = () => {
     console.log('clicked');
@@ -17,7 +13,6 @@ export default function ImgButton({navigation}) {
       mediaType: 'photo',
     };
     launchImageLibrary(options, response => {
-
       if (response.didCancel) {
         console.log('User cancelled image picker');
       } else if (response.error) {
@@ -25,14 +20,8 @@ export default function ImgButton({navigation}) {
       } else if (response.customButton) {
         console.log('User tapped custom button: ', response.customButton);
       } else {
-         setimg(response.assets[0].uri);
+        setimg(response.assets[0].uri);
       }
-      // if (response) {
-       
-      //   console.log(response);
-      // } else {
-      //   console.log('love from bug');
-      // }
     });
   };
   return (
@@ -50,50 +39,10 @@ export default function ImgButton({navigation}) {
         ) : (
           <Image
             style={{width: 100, height: 100, margin: 15, borderRadius: 100}}
-            source={require('../asset/cart.jpg')}
+            source={value}
           />
         )}
       </View>
     </TouchableOpacity>
   );
-}
-// import React, {useState} from 'react';
-// import {View, Text, Image, Button} from 'react-native';
-// import { ImagePicker ,showImagePicker} from 'react-native-image-picker';
-
-// const ScreenA = () => {
-//   const [imageUri, setImageUri] = useState(null);
-
-//   const handleImagePicker = () => {
-//     showImagePicker({}, response => {
-//       if (response.didCancel) {
-//         console.log('User cancelled image picker');
-//       } else if (response.error) {
-//         console.log('ImagePicker Error: ', response.error);
-//       } else {
-//         setImageUri(response.uri);
-//       }
-//     });
-//   };
-
-//   return (
-//     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-//       {imageUri ? (
-//         <Image source={{uri: imageUri}} style={{width: 200, height: 200}} />
-//       ) : (
-//         <Text>No image selected</Text>
-//       )}
-//       <Button title="Select Image" onPress={handleImagePicker} />
-//     </View>
-//   );
-// };
-
-// export default ScreenA;
-
-{
-  /* <CustomButton title="Upload Image" onPress={handleChoosePhoto
-      } />  */
-}
-{
-  /* <Button title="Upload Image" onPress={handleChoosePhoto} /> */
 }

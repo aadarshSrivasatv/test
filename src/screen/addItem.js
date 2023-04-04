@@ -32,6 +32,7 @@ export default function AddItem() {
             fontSize: 30,
             color: 'black',
             marginBottom: 10,
+            fontFamily: 'Montserrat-Bold',
           }}>
           Add Item
         </Text>

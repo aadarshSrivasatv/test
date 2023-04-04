@@ -74,13 +74,19 @@ export default function SignUp({navigation}) {
             <Text
               style={{
                 fontSize: 30,
-                fontWeight: 'bold',
+                // fontWeight: 'bold',
                 color: '#1A120B',
                 marginBottom: 15,
+                fontFamily: 'Montserrat-Bold',
               }}>
               Sign Up!
             </Text>
-            <Text style={{fontSize: 15, color: '#1A120B'}}>
+            <Text
+              style={{
+                fontSize: 15,
+                color: '#1A120B',
+                fontFamily: 'Montserrat-Regular',
+              }}>
               Welcome to our sign-up page! We're excited to have you join our
               community.
             </Text>
@@ -122,7 +128,12 @@ export default function SignUp({navigation}) {
                 type="email-address"
               />
               {checkEmailValidation ? null : (
-                <Text style={{color: 'red', marginLeft: 150}}>
+                <Text
+                  style={{
+                    color: 'red',
+                    marginLeft: 150,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
                   invalid email
                 </Text>
               )}
@@ -139,7 +150,14 @@ export default function SignUp({navigation}) {
                 secure={true}
               />
               {checkPasswordValidation ? null : (
-                <Text style={{color: 'red', marginLeft: 150}}>{errorMsg}</Text>
+                <Text
+                  style={{
+                    color: 'red',
+                    marginLeft: 150,
+                    fontFamily: 'Montserrat-Regular',
+                  }}>
+                  {errorMsg}
+                </Text>
               )}
               <CustomButton
                 title="Sign-Up"
@@ -171,6 +189,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+    fontFamily: 'Montserrat-Regular',
   },
   button: {
     alignItems: 'center',

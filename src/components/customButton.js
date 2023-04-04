@@ -3,8 +3,15 @@ import React from 'react';
 
 export default function CustomButton({title, onPress,customStyle}) {
   return (
-    <TouchableOpacity style={[styles.button,customStyle]} onPress={onPress}>
-      <Text style={{color: 'white', fontSize: 18}}>{title}</Text>
+    <TouchableOpacity style={[styles.button, customStyle]} onPress={onPress}>
+      <Text
+        style={{
+          color: 'white',
+          fontSize: 18,
+          fontFamily: 'Montserrat-Regular',
+        }}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 }

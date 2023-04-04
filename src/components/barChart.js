@@ -30,7 +30,7 @@ const chartConfig = {
 export default function BChart() {
   return (
     <View style={{marginTop: 25, alignItems: 'center'}}>
-      <Text style={{fontSize: 20, color: 'black', marginBottom: 8}}>
+      <Text style={{fontSize: 20, color: 'black', marginBottom: 8 , fontFamily: 'Montserrat-Bold',}}>
         Daily sales
       </Text>
       <View>

@@ -39,6 +39,7 @@ export default function MyStack() {
             color: '#FFB100',
             textAlign: 'center',
             width: Dimensions.get('screen').width / 1.6,
+            fontFamily: 'Montserrat-Regular',
             // width: Dimensions,
             // borderWidth: 2,
           },
@@ -48,6 +49,7 @@ export default function MyStack() {
           },
         }}
       />
+      
     </Stack.Navigator>
   );
 }

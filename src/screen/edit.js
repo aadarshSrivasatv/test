@@ -3,7 +3,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import CustomCard from '../components/customCard';
 import { pushData,popData } from './data';
-export default function Edit({route}) {
+export default function Edit({navigation,route}) {
   const data = route.params;
   return (
     <View style={{backgroundColor: '#FFB100', flex: 1, alignItems: 'center'}}>
@@ -31,7 +31,7 @@ export default function Edit({route}) {
           size={50}
           color="white"
           onPress={() => {
-            alert('clicked');
+            alert("edit clicked");
           }}
         />
       </View>

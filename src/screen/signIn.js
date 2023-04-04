@@ -29,13 +29,19 @@ export default function SignIn({navigation}) {
           <Text
             style={{
               fontSize: 30,
-              fontWeight: 'bold',
+              // fontWeight: 'bold',
               color: '#1A120B',
               marginBottom: 15,
+              fontFamily: 'Montserrat-Bold',
             }}>
             Sign In
           </Text>
-          <Text style={{fontSize: 15, color: '#1A120B'}}>
+          <Text
+            style={{
+              fontSize: 15,
+              color: '#1A120B',
+              fontFamily: 'Montserrat-Regular',
+            }}>
             Welcome back! Please sign in to continue
           </Text>
         </View>
@@ -68,7 +74,14 @@ export default function SignIn({navigation}) {
             type="email-address"
           />
           {checkEmailValidation ? null : (
-            <Text style={{color: 'red', marginLeft: 150}}>invalid email</Text>
+            <Text
+              style={{
+                color: 'red',
+                marginLeft: 150,
+                fontFamily: 'Montserrat-Regular',
+              }}>
+              invalid email
+            </Text>
           )}
           <CustomInput
             placeholder="Password"

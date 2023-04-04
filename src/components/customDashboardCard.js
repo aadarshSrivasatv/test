@@ -6,8 +6,13 @@ export default function CustomDashboardCard({heading, amount,prefix,suffix}) {
   return (
     <View style={[styles.cardBody, styles.shadowProp]}>
       <Text style={styles.textStyle}>{heading}</Text>
-      <Text style={{color: 'green', fontSize: 35}}>
-        {prefix?`${prefix} `:null}
+      <Text
+        style={{
+          color: 'green',
+          fontSize: 35,
+          fontFamily: 'Montserrat-Regular',
+        }}>
+        {prefix ? `${prefix} ` : null}
         <AnimateNumber
           value={amount}
           timing="linear"
@@ -40,5 +45,6 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 20,
     color: 'black',
+    fontFamily: 'Montserrat-Bold',
   },
 });

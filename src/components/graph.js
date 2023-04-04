@@ -8,7 +8,15 @@ export default function Graph() {
       style={{
         alignItems: 'center',
       }}>
-      <Text style={{fontSize: 20, color: 'black', marginBottom: 8}}>Sales</Text>
+      <Text
+        style={{
+          fontSize: 20,
+          color: 'black',
+          marginBottom: 8,
+          fontFamily: 'Montserrat-Bold',
+        }}>
+        Sales
+      </Text>
       <LineChart
         data={{
           labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'july'],
@@ -52,7 +60,7 @@ export default function Graph() {
             stroke: 'black',
           },
         }}
-         bezier
+        bezier
         style={{
           marginVertical: 8,
           borderRadius: 16,

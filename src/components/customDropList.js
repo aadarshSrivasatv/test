@@ -19,7 +19,11 @@ const DropdownInput = ({value, setValue}) => {
       <Picker
         selectedValue={value}
         onValueChange={setValue}
-        style={{color: 'black', height: 35, width: '90%'}}>
+        style={{
+          color: 'black',
+          height: 35,
+          width: '90%',
+        }}>
         <Picker.Item label="Pen" value="pen" />
         <Picker.Item label="Pencil" value="pencil" />
         <Picker.Item label="Rubber" value="rubber" />

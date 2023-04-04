@@ -36,9 +36,15 @@ export default function CustomCard({
           }}
           source={image}
         />
-        <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>
+        <Text
+          style={{
+            fontSize: 20,
+            color: 'black',
+            // fontWeight: 'bold',
+            fontFamily: 'Montserrat-Bold',
+          }}>
           {name}
-          <Text> ${price}</Text>
+          <Text style={{fontFamily: 'Montserrat-Bold'}}> ${price}</Text>
         </Text>
       </View>
       <View
@@ -51,7 +57,12 @@ export default function CustomCard({
           },
           trim && {padding: 30},
         ]}>
-        <Text style={{fontSize: 20, color: 'black'}}>
+        <Text
+          style={{
+            fontSize: 20,
+            color: 'black',
+            fontFamily: 'Montserrat-Regular',
+          }}>
           {trim ? description : trimString(description, 100)}
         </Text>
       </View>

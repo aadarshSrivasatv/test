@@ -38,5 +38,6 @@ const styles = StyleSheet.create({
     // textAlign: 'center',
     borderRadius: 12,
     color: 'black',
+    fontFamily: 'Montserrat-Regular',
   },
 });

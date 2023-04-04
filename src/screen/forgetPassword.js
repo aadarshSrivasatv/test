@@ -29,13 +29,19 @@ export default function ForgetPassword({navigation}) {
           <Text
             style={{
               fontSize: 30,
-              fontWeight: 'bold',
+              // fontWeight: 'bold',
               color: '#1A120B',
               marginBottom: 15,
+              fontFamily: 'Montserrat-Bold',
             }}>
             Forget Password
           </Text>
-          <Text style={{fontSize: 15, color: '#1A120B'}}>
+          <Text
+            style={{
+              fontSize: 15,
+              color: '#1A120B',
+              fontFamily: 'Montserrat-Regular',
+            }}>
             Enter the email address associated with your account below to
             receive a password reset code.
           </Text>
@@ -69,7 +75,14 @@ export default function ForgetPassword({navigation}) {
             type="email-address"
           />
           {checkEmailValidation ? null : (
-            <Text style={{color: 'red', marginLeft: 150}}>invalid email</Text>
+            <Text
+              style={{
+                color: 'red',
+                marginLeft: 150,
+                fontFamily: 'Montserrat-Regular',
+              }}>
+              invalid email
+            </Text>
           )}
           <CustomButton
             title="Send"

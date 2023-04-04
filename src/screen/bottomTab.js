@@ -58,6 +58,7 @@ export default function BottomTab() {
             color: '#FFB100',
             textAlign: 'center',
             width: Dimensions.get('screen').width / 1.09,
+            fontFamily:"Montserrat-Bold"
             // width: Dimensions,
             // borderWidth: 2,
           },
